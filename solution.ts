@@ -216,7 +216,6 @@ function getUniqueValues(
 // const array2 = [3, 4, 5, 6, 7];
 
 // console.log(getUniqueValues(array1, array2));
-
 type Product = {
     name: string;
     price: number;
@@ -236,7 +235,9 @@ function calculateTotalPrice(products: Product[]): number
     for (const p of products) 
         
     {
-        total = (p.price * p.quantity) + total; 
+
+        const diz = p.discount ?? 0;
+        total = ((p.price*(1-diz/100)) * p.quantity ) + total; 
     }
 
     return total;
@@ -244,10 +245,10 @@ function calculateTotalPrice(products: Product[]): number
     }
 }
 
-// // Sample Input
+// // // Sample Input
 // const products = [
 //   { name: 'Pen', price: 10, quantity: 2 },
-//   { name: 'Notebook', price: 25, quantity: 8, discount: 10 },
+//   { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
 //   { name: 'Bag', price: 50, quantity: 1, discount: 20 },
 // ];
 
