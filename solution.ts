@@ -25,10 +25,7 @@ function formatValue(value: number | string  | boolean): number | string | boole
     return value;
 }
 
-// // Sample Input
-// console.log(formatValue('helloOOgh')); // HELLO
-// console.log(formatValue(-1));       // 50
-// console.log(formatValue(false));    // false
+
 
 
 
@@ -56,8 +53,7 @@ function getLength(value: any[]| string): number
 }
 
 
-// console.log(getLength(''));   // 10
-// console.log(getLength([])); // 4
+
 
 
 class Person {
@@ -79,11 +75,7 @@ class Person {
 }
 
 
-// const person1 = new Person('John Doe', 30);
-// console.log(person1.getDetails());
 
-// const person2 = new Person('Alice', 25);
-// console.log(person2.getDetails());
 type Boooks = {
     title: string;
     rating: number;
@@ -98,14 +90,7 @@ function filterByRating(Bookz: Boooks[]): Boooks[]
     return temp;
 }
 
-// // Sample Input
-// const books = [
-//   { title: 'Book A', rating: 4.5 },
-//   { title: 'Book B', rating: 3.2 },
-//   { title: 'Book C', rating: 5.0 },
-// ];
 
-// console.log(filterByRating(books));
 type Userss = {
     id: number;
      email: string;
@@ -126,14 +111,7 @@ function filterActiveUsers(Userz: Userss[]): Userss[]
     return temp;
 }
 
-// // Sample Input
-// const users = [
-//   { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
-//   { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
-//   { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: false },
-// ];
 
-// console.log(filterActiveUsers(users));
 interface Book {
     title: string;
 
@@ -156,15 +134,7 @@ function printBookDetails(book: Book): void
    
 }
 
-// // Sample Input
-// const myBook: Book = {
-//     title: 'The Great Gatsby',
-//     author: 'F. Scott Fitzgerald',
-//     publishedYear: 1925,
-//     isAvailable: false,
-// };
 
-// printBookDetails(myBook);
 function getUniqueValues(
   arr1: (number | string)[],
   arr2: (number | string)[]
@@ -212,10 +182,7 @@ function getUniqueValues(
     return final;
 }
 
-// const array1 = [1, 2, 3, 4, 5];
-// const array2 = [3, 4, 5, 6, 7];
 
-// console.log(getUniqueValues(array1, array2));
 type Product = {
     name: string;
     price: number;
@@ -244,12 +211,3 @@ function calculateTotalPrice(products: Product[]): number
 
     }
 }
-
-// // // Sample Input
-// const products = [
-//   { name: 'Pen', price: 10, quantity: 2 },
-//   { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
-//   { name: 'Bag', price: 50, quantity: 1, discount: 20 },
-// ];
-
-// console.log(calculateTotalPrice(products));  // 145
